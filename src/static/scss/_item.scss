@@ -1,0 +1,57 @@
+.item{
+	&-img{
+		&-top{
+			height: 400px;
+			background-image: url('/static/produce/1 (15).jpg');
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+			display: flex;
+			align-items: center;
+		}
+	}
+	&-name{
+		background: rgba(0,0,0,.5);
+		text-align: center;
+		color: #fff;
+		width: 100%;
+		font-size: 2em;
+		padding: 16px;
+		text-transform: uppercase;
+	}
+	&-price{
+		font-size: 1.2em;
+	}
+	&-nutrition{
+		background: #efefef;
+		padding: 16px 0;
+		&-list{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			li{
+				display: flex;
+				span{
+					margin-left: auto;
+					&:first-of-type{
+						font-weight: 600;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+	&-type{
+		img{
+			margin-right: 16px;
+			width: 50px;
+			filter: invert(0.9);
+			&.active{
+				filter:none;
+			}
+			&:hover{
+				filter: invert(0.5);
+			}
+		}
+	}
+}

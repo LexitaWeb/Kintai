@@ -1,0 +1,38 @@
+html{
+	height: 100%;
+}
+body{
+	min-height: 100%;
+}
+
+.dropdown{
+	&:hover{
+		.dropdown-menu{
+			display: block;
+		}
+	}
+}
+.caret{
+	position: relative;
+	&:before{
+		content:'';
+		border:.3em solid transparent;
+		border-top-color: inherit;
+		position: absolute;
+		top:0;
+		left: 0;
+	}
+}
+.slick-prev:before,
+.slick-next:before{
+	color: $primary;
+}
+
+.list{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	&-inline{
+		display: flex;
+	}
+}

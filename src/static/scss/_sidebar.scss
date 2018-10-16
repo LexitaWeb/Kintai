@@ -1,0 +1,37 @@
+.sidebar{
+	width: 200px;
+	@media screen and (max-width:991.98px){
+		&-closed{
+			width: 0;
+			overflow: hidden;
+		}
+	}
+	span{
+		font-size: 14px;
+		padding:0 4px;
+	}
+	ul{
+		list-style: none;
+		padding-left: 0;
+		li{
+			a{
+				display: block;
+				padding: 4px 16px; 
+				&:hover{
+					background: rgba(0,0,0,.06);
+				}
+				&.active{
+					// background: rgba(0,0,0,.5);
+					color: #fff;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	&-wrap{
+		background-repeat: repeat-y;
+		background-position: calc(100% + 1px) 0;
+		background-size: 53px;
+		background-color: #cecece;
+	}
+}

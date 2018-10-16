@@ -1,0 +1,25 @@
+.cart{
+	&-list{
+		li{
+			padding: 16px;
+			& + li{
+				border-top: 1px solid rgba(0,0,0,.12);
+			}
+		}
+		&-name{
+			width: 100%;
+		}
+	}
+	&-summary{
+		li{
+			display: flex;
+			padding: 4px 8px;
+			& + li{
+				border-top: 1px solid rgba(0,0,0,.12);
+			}
+			div:nth-child(2){
+				margin-left: auto;
+			}
+		}
+	}
+}

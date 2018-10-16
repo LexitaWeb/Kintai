@@ -1,0 +1,31 @@
+.search{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	z-index: 999999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2em;
+	.fa-times{
+		position: absolute;
+		top: 50px;
+		right: 16px;
+		cursor: pointer;
+	}
+	input{
+		background: transparent;
+		border: none;
+		border-bottom: 2px solid #fff;
+		outline: none!important;
+		box-shadow: none!important;
+		color: #fff;
+	}
+
+	&.closed{
+		display: none;
+	}
+}

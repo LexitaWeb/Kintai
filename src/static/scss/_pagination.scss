@@ -1,0 +1,26 @@
+.pagination{
+	ul{
+		list-style: none;
+		padding: 0;
+		display: flex;
+		li{
+			margin:0 4px;
+			a{
+				display: block;
+				width: 40px;
+				height: 40px;
+				padding: 8px;
+				text-align: center;
+				border-radius: 100%;
+				&:hover{
+					background: rgba(0,0,0,.06);
+					text-decoration: none;
+				}
+				&.active{
+					background: $primary;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
