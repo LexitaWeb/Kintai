@@ -5,10 +5,10 @@ import { StaticQuery, graphql } from 'gatsby'
 import Nav from "../components/nav";
 import Footer from '../components/footer'
 import '../static/scss/style.scss';
-import '../static/assets/fonts/Alright_Sans/AlrightSans-Regular-v3.otf'
-import '../static/assets/fonts/Alright_Sans/AlrightSans-Medium-v3.otf'
-import '../static/assets/fonts/Alright_Sans/AlrightSans-Bold-v3.otf'
-import '../static/assets/fonts/PFDinText/PFDINTEXTPRO-MEDIUM.ttf'
+// import '../static/assets/fonts/Alright_Sans/AlrightSans-Regular-v3.otf'
+// import '../static/assets/fonts/Alright_Sans/AlrightSans-Medium-v3.otf'
+// import '../static/assets/fonts/Alright_Sans/AlrightSans-Bold-v3.otf'
+// import '../static/assets/fonts/PFDinText/PFDINTEXTPRO-MEDIUM.ttf'
 import BG from '../static/assets/bg.svg'
 const Layout = ({ children }) => (
   <StaticQuery
