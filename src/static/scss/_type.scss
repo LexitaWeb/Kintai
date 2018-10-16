@@ -1,28 +1,30 @@
-@font-face {
-	font-family: 'Alright Sans';
-	src: url('/static/fonts/AlrightSans-Regular-v3.otf');
-	font-weight: normal;
-	font-style:normal;
-}
-@font-face {
-	font-family: 'Alright Sans';
-	src: url('/static/fonts/AlrightSans-Medium-v3.otf');
-	font-weight: 600;
-	font-style:normal;
-}
-@font-face {
-	font-family: 'Alright Sans';
-	src: url('/static/AlrightSans-Bold-v3.otf');
-	font-weight: bold;
-	font-style:normal;
-}
-@font-face {
-	font-family: 'PFDinText';
-	src: url('/static/fonts/PFDINTEXTPRO-MEDIUM.ttf');
-	font-weight: 600;
-	font-style:normal;
-}
-$font-family-base: 'Alright Sans';
+// @font-face {
+// 	font-family: 'Alright Sans';
+// 	src: url('../assets/fonts/Alright_Sans/AlrightSans-Regular-v3.otf');
+// 	font-weight: normal;
+// 	font-style:normal;
+// }
+// @font-face {
+// 	font-family: 'Alright Sans';
+// 	src: url('../assets/fonts/Alright_Sans/AlrightSans-Medium-v3.otf');
+// 	font-weight: 600;
+// 	font-style:normal;
+// }
+// @font-face {
+// 	font-family: 'Alright Sans';
+// 	src: url('../assets/fonts/Alright_Sans/AlrightSans-Bold-v3.otf');
+// 	font-weight: bold;
+// 	font-style:normal;
+// }
+// @font-face {
+// 	font-family: ''Niramit', sans-serif';
+// 	src: url('../assets/fonts/'Niramit', sans-serif/'Niramit', sans-serifPRO-MEDIUM.ttf');
+// 	font-weight: 600;
+// 	font-style:normal;
+// }
+@import url('https://fonts.googleapis.com/css?family=Niramit:600&subset=latin-ext,thai,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+$font-family-base: 'Roboto', sans-serif;
 
 h2.group{
 	border-bottom: 1px solid;
@@ -30,5 +32,5 @@ h2.group{
 }
 
 h1.group{
-	font-family: "PFDinText";
+	font-family: 'Niramit', sans-serif;
 }
