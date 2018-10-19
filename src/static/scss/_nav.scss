@@ -1,6 +1,25 @@
 .navbar {
 	background: $primary;
 	display: flex;
+	&-btn{
+		color: #cacaca;
+		font-size: 1.1em;
+		transition: .5s;
+		display: flex;
+		align-items: center;
+		margin: 0 16px;
+		.badge{
+			background: #cacaca;
+			font-size: .6em;
+			margin-left: 8px; 
+			margin-top: 6px;
+			color: $primary;
+		}
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
 	&-wrap{
 		@media screen and (max-width:991.98px){
 			position: sticky;

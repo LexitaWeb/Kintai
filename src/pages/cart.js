@@ -1,18 +1,23 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout'
 
-const cartItems = [
-	{name:'Produktas', img:'1 (10)', qt:4},
-	{name:'Produktas', img:'1 (11)', qt:4},
-	{name:'Produktas', img:'1 (12)', qt:4},
-];
 export default class Cart extends Component {
+  constructor(props){
+	  super(props);
+	  this.state = {
+		  cartItems: [
+			  { name: 'Upėtakio filė be kaulų', img: '1 (10)', qt: 4, price:3 },
+			  { name: 'Karpio šašlykas', img: '1 (11)', qt: 4, price:6 },
+			  { name: 'Produktas', img: '1 (13)', qt: 4, price:5 },
+		  ]
+	  };
+  }
   render() {
 	return (
 	  <Layout>
-		  <div className="container py-5">
-				<h2 className="mb-5">Krepšelis</h2>
-				<div class="row align-items-center flex-nowrap text-muted">
+		  <div className="container py-lg-5 py-3">
+				<h2>Krepšelis</h2>
+				{/* <div class="row align-items-center flex-nowrap text-muted">
 					<div style={{width:115}} className="col-auto">
 					</div>
 					<div className="col">
@@ -30,8 +35,8 @@ export default class Cart extends Component {
 
 					<div className="col-auto" style={{width:76}}>
 					</div>
-				</div>
-				<ul className="list cart-list">
+				</div> */}
+				{/* <ul className="list cart-list">
 					{cartItems.map((el,i)=>{
 						return(
 							<li key={i}>
@@ -72,33 +77,83 @@ export default class Cart extends Component {
 							</li>
 						)
 					})}
-				</ul>
+
+				</ul> */}
+					<table className="cart-list">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Pavadinimas</th>
+								<th>Vieneto kaina</th>
+								<th width="150">Kiekis</th>
+								<th>Viso</th>
+								<th width="30"></th>
+							</tr>
+						</thead>
+						<tbody>
+							{this.state.cartItems.map((el,i)=>{
+								return(
+									<tr key={i}>
+										<td>
+											<img width="70" src={`/static/produce/${el.img}.jpg`} alt={el.name}/>
+										</td>
+										<td>
+											{el.name}
+										</td>
+										<td>
+											<span className="d-md-none fw-500">Vieneto kaina: </span>{el.price} €
+										</td>
+										<td>
+											<div className="input-group">
+												<div className="input-group-prepend">
+													<button className="btn btn-primary">-</button>
+												</div>
+												<input value={3 * i + 1} type="text" className="form-control" />
+												<div className="input-group-append">
+													<button className="btn btn-primary">+</button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span className="d-md-none fw-500">Viso: </span>{el.qt * el.price} €
+										</td>
+										<td>
+											<a href="javascript:;" className="btn btn-sm btn-outline-primary">
+												<i className="fas fa-times d-none d-md-block"></i>
+												<span className="d-md-none">Pašalinti</span>
+											</a>
+										</td>
+									</tr>
+								)
+							})}
+						</tbody>
+					</table>
 				{/* <hr style={{borderWidth:3, marginTop:0}}/> */}
 				<div className="mt-5">
 					<h2>Suvestinė</h2>
 					<ul className="list cart-summary">
 						<li>
-							<div><b>Suma</b></div>
+							<div><span className="fw-500">Suma</span></div>
 							<div>
-								48 €
+								56 €
 							</div>
 						</li>
 						<li>
 							<div>
-								<b>Pristatymas</b>
+								<span className="fw-500">Pristatymas</span>
 							</div>
 							<div>
 								5 €
 							</div>
 						</li>
 						<li>
-							<div><b>Viso</b></div>
-							<div>53 €</div>
+							<div><span className="fw-500">Viso</span></div>
+							<div>61 €</div>
 						</li>
 					</ul>
 				</div>
 				<div className="text-center mt-5">
-					<a href="javascript:;" className="btn btn-lg btn-primary">ATSISKAITYTI</a>
+					<a href="javascript:;" className="btn btn-lg btn-primary">UŽBAIGTI UŽSAKYMĄ</a>
 				</div>
 		  </div>
 	  </Layout>

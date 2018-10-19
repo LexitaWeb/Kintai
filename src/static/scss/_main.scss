@@ -7,8 +7,20 @@ body{
 
 .dropdown{
 	&:hover{
-		.dropdown-menu{
+		>.dropdown-menu{
 			display: block;
+		}
+	}
+	&-menu{
+		min-width: 12em;
+		a{
+			&:hover{
+				color: $body-color!important;
+			}
+		}
+		&-sub{
+			left: calc(100% + 16px);
+			top: 0;
 		}
 	}
 }
@@ -22,10 +34,16 @@ body{
 		top:0;
 		left: 0;
 	}
+	&.right{
+		&:before{
+			border-top-color: transparent;
+			border-left-color: inherit;
+		}
+	}
 }
 .slick-prev:before,
 .slick-next:before{
-	color: $primary;
+	color: $primary!important;
 }
 
 .list{
@@ -34,5 +52,15 @@ body{
 	margin: 0;
 	&-inline{
 		display: flex;
+	}
+}
+$duration: .8s;
+.fade-down{
+	&-1{
+		animation: fadeDown $duration forwards ease-in;
+	}
+	&-2{
+		animation: fadeDown $duration backwards ease-in;
+		animation-delay: $duration;
 	}
 }

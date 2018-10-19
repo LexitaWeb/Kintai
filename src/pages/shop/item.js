@@ -38,23 +38,23 @@ export default class Item extends Component {
 					</div>
 				</div>
 				<div className="col-md-8 col-lg-6 d-flex flex-column">
-					<h4 className="text-muted">Placiakakcio kepsneliai</h4>
+					<h2 className="text-muted">Placiakakcio kepsneliai</h2>
 					<div className="item-type mb-3">
 						<a href="javascript:;"><img title="Visa žuvis" src="/static/icons/fish.svg" alt="asd"/></a>
 						<a href="javascript:;"><img title="Nukaulinta" src="/static/icons/boneless.svg" alt="asd"/></a>
-						<a href="javascript:;"><img  title="Kepsneliai" src="/static/icons/steak.svg" className="active" alt="asd"/></a>
+						<a href="javascript:;"><img style={{height:35}} title="Kepsneliai" src="/static/icons/steak.svg" className="active" alt="asd"/></a>
 						<a href="javascript:;"><img title="Filė" src="/static/icons/filet.svg" alt="asd"/></a>
 						<a href="javascript:;"><img  title="Malta" src="/static/icons/grinded.svg" alt="asd"/></a>
 					</div>
 					<div className="row">
 							<div className="col-4">
-								<b className="mr-2">Vieneto kaina</b>
+								<span className="fw-500 mr-2">Vieneto kaina</span>
 							</div>
 							<div className="col-6">
 								<span>6€</span>
 							</div>
 							<div className="col-4">
-								<b className="mr-2">Vieneto svoris</b>
+								<span className="fw-500 mr-2">Vieneto svoris</span>
 							</div>
 							<div className="col-6">
 								<span>1,25 KG</span>

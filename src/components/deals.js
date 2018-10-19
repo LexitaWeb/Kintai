@@ -10,16 +10,18 @@ export default class Deals extends Component {
 	render() {
 		var settings = {
 			dots: true,
+			autoplay:true,
+			arrows:false,
 			infinite: true,
 			speed: 500,
 			slidesToShow: 1,
 			slidesToScroll: 1
 		}
 		return (
-			<Slider>
+			<Slider {... settings}>
 				{items.map((el,i)=>{
 					return(
-						<div className="slider" key={i}>
+						<div className={`slider slider-${this.props.orientation}`} key={i}>
 							{/* <div className="slide-image" style={{backgroundImage:`/static/produce/${el.img}.jpg`, height:600}}></div> */}
 							<div className="row no-gutters">
 								<div className="col-md">

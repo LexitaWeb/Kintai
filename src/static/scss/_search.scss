@@ -23,6 +23,9 @@
 		outline: none!important;
 		box-shadow: none!important;
 		color: #fff;
+		&::placeholder{
+			color: #d5d5d5;
+		}
 	}
 
 	&.closed{

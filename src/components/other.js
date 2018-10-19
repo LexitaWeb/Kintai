@@ -17,7 +17,9 @@ export default class Other extends Component {
 	  var settings = {
 		  dots: true,
 		  infinite: true,
-		  speed: 500,
+		  speed:1000,
+		  autoplay: true,
+		  autoplaySpeed: 5000,
 		  slidesToShow: 3,
 		  slidesToScroll: 3,
 		  arrows:false

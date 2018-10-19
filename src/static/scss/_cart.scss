@@ -1,13 +1,27 @@
 .cart{
 	&-list{
-		li{
-			padding: 16px;
-			& + li{
-				border-top: 1px solid rgba(0,0,0,.12);
-			}
+		width: 100%;
+		th,td{
+			padding: 4px 8px;
 		}
-		&-name{
-			width: 100%;
+		@media screen and (max-width:768px){
+			tr,td,table,tbody{
+				display: block;
+			}
+			thead{
+				display: none;
+			}
+			tr{
+				margin-bottom: 32px;
+			}
+			td{
+				&:last-of-type{
+					text-align: right;
+				}
+				img{
+					width: 100%!important;
+				}
+			}
 		}
 	}
 	&-summary{

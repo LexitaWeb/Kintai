@@ -15,20 +15,49 @@ const products = [
 	{name:'Plačiakakčio kepsneliai', img:'1 (15)', price:5},
 ]
 export default class Catalog extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			filter:'all',
+			filterNames:{
+				all:'Prekės',
+				frozen:'Šaldytos',
+				smoked:'Rūkytos',
+				thawed:'Atšildytos'
+			}
+		}
+	}
+	filterChange(filter){
+		this.setState({
+			filter:filter
+		});
+	}
   render() {
 	return (
 	  <Layout>
-		<div className="row no-gutters flex-nowrap">
-				<div className="col-auto sidebar-wrap" style={{backgroundImage:`url("${PATTERN}")`}}>
-				<Sidebar/>
+		<div className="row no-gutters">
+				<div className={`col-auto sidebar-wrap sidebar-${ this.state.filter }`} style={{backgroundImage:`url("${PATTERN}")`}}>
+				<Sidebar onFilter={this.filterChange.bind(this)} activeFilter={this.props.filter}/>
 			</div>
-			<div className="col-lg-7 mx-auto">
-				<div className="px-5 px-lg-0 py-5">
-						<h2>Savaitės pasiūlymai</h2>
+			<div className="col-lg">
+				<div className="px-5 py-4" style={{maxWidth:1000,margin:'0 auto'}}>
+						{/* <h2 className="text-center mb-4 text-uppercase text-muted">Savaitės pasiūlymai</h2> */}
 						<div className="mb-4">
-							<Deals/>
+							<Deals />
 						</div>
-						<h2>Prekės</h2>
+						<div className="d-flex">
+							<h2 className="flex-grow-1">Prekės</h2>
+							<div>
+								<select className="form-control ml-auto">
+									<option value="0" readonly>Rūšiuoti pagal</option>
+									<option value="0">Nuo naujausių</option>
+									<option value="0">Nuo seniausių</option>
+									<option value="0">Kainą nuo mažiausios</option>
+									<option value="0">Kainą nuo didžiausios</option>
+								</select>
+							</div>
+						</div>
+						<div className="underline mb-3"></div>
 						<div className="row">
 							{products.map((el,i)=>{
 								return(

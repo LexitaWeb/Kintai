@@ -19,11 +19,12 @@
 				padding: 4px 16px; 
 				&:hover{
 					background: rgba(0,0,0,.06);
+					text-decoration: none;
 				}
 				&.active{
 					// background: rgba(0,0,0,.5);
 					color: #fff;
-					font-weight: 600;
+					font-weight: 500;
 				}
 			}
 		}
@@ -34,4 +35,15 @@
 		background-size: 53px;
 		background-color: #cecece;
 	}
+	// $sidebarColors:(
+	// 	frozen:red,
+	// 	thawed:blue,
+	// 	smoked:brown
+	// );
+	// @each $type,$color in $sidebarColors{
+	// 	&-#{$type}{
+	// 			background-color: $color;
+	// 	}
+
+	// }
 }

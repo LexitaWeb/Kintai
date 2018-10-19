@@ -18,7 +18,7 @@
 				right: calc(100% - 60px);
 				z-index: -1;
 				width: 100px;
-				background: #95b3c3;
+				background: $secondary;
 				height: 100%;
 				transform: skew(8deg);
 			}
@@ -29,7 +29,7 @@
 				left: calc(100% - 60px);
 				z-index: -1;
 				width: 100px;
-				background: #95b3c3;
+				background: $secondary;
 				height: 100%;
 				transform: skew(8deg);
 			}
@@ -57,5 +57,23 @@
 	&-name{
 		font-size: calc(1.2em + 1vw);
 	}
-
+	&-vertical{
+		.row{
+			display: flex;
+			[class*="col"]{
+				flex:0 0 auto;
+				max-width: none;
+			}
+		}
+		.slider{
+			&-description{
+				&:before,&:after{
+					display: none;
+				}
+			}
+			&-img{
+				padding-bottom: 100%;
+			}
+		}
+	}
 }

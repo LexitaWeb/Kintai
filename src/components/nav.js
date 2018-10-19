@@ -46,29 +46,80 @@ export default class Nav extends Component {
 						<li>
 							<Link to="/">
 								Pagrindinis
-						</Link>
-						</li>
-						<li>
-							<Link to="/shop/catalog">
-								Parduotuvė
 							</Link>
 						</li>
 						<li>
-							<Link to="/">
+							<div className="dropdown">
+								<Link to="/shop-main">
+									Parduotuvė
+									<span className="caret ml-2"></span>
+								</Link>
+								<ul className="dropdown-menu">
+									<li>
+										<div className="dropdown">
+											<a href="javascript:;">
+												Paruošimo rūšys
+												<span className="caret right ml-auto mb-2"></span>
+											</a>
+											<ul className="dropdown-menu dropdown-menu-sub">
+												<li>
+													<Link to="/shop/catalog">Šaldytos</Link>
+												</li>
+												<li>
+													<Link to="/shop/catalog">Atšildytos</Link>
+												</li>
+												<li>
+													<Link to="/shop/catalog">Rūkytos</Link>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<div className="dropdown">
+											<a href="javascript:;">
+												Žuvies rūšys
+												<span className="caret right ml-auto mb-2"></span>
+											</a>
+											<ul className="dropdown-menu dropdown-menu-sub">
+												<li>
+													<Link to="/shop/catalog">Karpis</Link>
+												</li>
+												<li>
+													<Link to="/shop/catalog">Šamas</Link>
+												</li>
+												<li>
+													<Link to="/shop/catalog">Karosas</Link>
+												</li>
+												<li>
+													<Link to="/shop/catalog">...</Link>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<Link to="/shop/catalog">
+											Visi produktai
+										</Link>
+									</li>
+								
+								</ul>
+							</div>
+						</li>
+						<li>
+							<Link to="/contacts">
 								Kontaktai
 						</Link>
 						</li>
-						<li>
-							<Link to="/shop/catalog" onClick={this.toggleSearch}>
-								<i className="fas fa-search mt-1"></i>
-							</Link>
-						</li>
-						<li>
-							<Link to="/cart">
-								<i className="fas fa-shopping-cart mt-1"></i>
-							</Link>
-						</li>
 					</ul>
+					<div className="d-flex">
+						<a className="navbar-btn" href="javascript:;" onClick={this.toggleSearch}>
+							<i className="fas fa-search mt-1"></i>
+						</a>
+						<Link className="navbar-btn" to="/cart">
+							<i className="fas fa-shopping-cart mt-1"></i>
+							<span className="badge">3</span>
+						</Link>
+					</div>
 				</nav>
 				<div className={`sidebar-menu d-lg-none bg-secondary ${this.state.menuOpen?"open":"closed"}`}>
 					<div className="sidebar-menu-content">

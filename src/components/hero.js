@@ -18,7 +18,7 @@ export default class Hero extends Component {
 					</div>
 					<div className="hero-button">
 						{/* <a href="/shop" className="btn btn-secondary btn-lg rounded-0">Parduotuvė</a> */}
-						<Link to="/shop/catalog" className="btn btn-outline-light btn-lg">Parduotuvė</Link>
+						<Link to="/shop-main" className="btn btn-outline-light btn-lg">Parduotuvė</Link>
 					</div>
 			</div>
 		</div>

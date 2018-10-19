@@ -8,7 +8,7 @@ export default class Product extends Component {
 		<div className="product-img">
 			<a href="/shop/item" style={{backgroundImage:`url("${this.props.img}")`}}>
 			</a>
-				<div className="product-actions">
+				<div className="product-actions d-none d-lg-block">
 					<a href="javascript:;">
 						Į krepšelį
 					</a>
