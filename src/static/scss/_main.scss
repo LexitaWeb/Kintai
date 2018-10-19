@@ -14,12 +14,14 @@ body{
 	&-menu{
 		min-width: 12em;
 		a{
+			display: flex;
+			align-items: center;
 			&:hover{
 				color: $body-color!important;
 			}
 		}
 		&-sub{
-			left: calc(100% + 16px);
+			left:calc(100% - 1px);
 			top: 0;
 		}
 	}
